@@ -30,7 +30,7 @@ namespace Toast
             this.Location = new Point(x - this.Width, y - this.Height);
         }
 
-        public async void Show(INotifyMotion motion, int delay = 0)
+        public async void ShowAsync(INotifyMotion motion, int delay = 0)
         {
             notifyMotion = motion;
             this.Controls.Add(motion.Content);

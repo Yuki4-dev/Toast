@@ -59,7 +59,7 @@ namespace Toast
             };
             content.ClickContent += (s, e) => MessageBox.Show($"Click : {((Control)s).BackColor}");
 
-            toastForm.Show(GetMotion(content, toastForm.Size, (ToastType)comboBox1.SelectedValue), 5000);
+            toastForm.ShowAsync(GetMotion(content, toastForm.Size, (ToastType)comboBox1.SelectedValue), 5000);
         }
 
         private INotifyMotion GetMotion(NotifyContent content, Size areaSize, ToastType type)
